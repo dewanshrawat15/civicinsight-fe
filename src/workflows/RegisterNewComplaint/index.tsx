@@ -13,13 +13,13 @@ export const RegisterNewComplaint = () => {
         updateCoords(position.coords);
     };
 
-    const getUserCoordinates = () => {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition);
-        }
-    };
-
     useEffect(() => {
+        const getUserCoordinates = () => {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            }
+        };
+
         getUserCoordinates();
     }, []);
 
