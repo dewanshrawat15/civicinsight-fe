@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 import { ACCESS_TOKEN, REFRESH_TOKEN } from "./constants";
 import { refreshAccessToken } from "./auth";
 
@@ -28,14 +28,16 @@ apiClient.interceptors.response.use(
         console.log("Response:", response);
         return response;
     },
-    (error) => {
-        if (error.response && error.response.status === 401) {
-            const refreshToken = sessionStorage.getItem(REFRESH_TOKEN);
-            if (refreshToken) {
-                refreshAccessToken(refreshToken);
-            } else {
-                sessionStorage.clear();
-                window.location.href = "/";
+    (error: AxiosError | Error) => {
+        if (axios.isAxiosError(error)) {
+            if (error.response && error.response.status === 401) {
+                const refreshToken = sessionStorage.getItem(REFRESH_TOKEN);
+                if (refreshToken) {
+                    refreshAccessToken(refreshToken);
+                } else {
+                    sessionStorage.clear();
+                    window.location.href = "/";
+                }
             }
         }
         return Promise.reject(error);

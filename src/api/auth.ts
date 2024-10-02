@@ -12,6 +12,7 @@ export const refreshAccessToken = async (refreshToken: string) => {
 
         const { access: accessToken } = response.data;
         sessionStorage.setItem(ACCESS_TOKEN, accessToken);
+        window.location.reload();
     
     } catch (error) {
         console.info("Auth API Error", error);

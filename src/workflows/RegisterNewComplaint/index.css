@@ -1,0 +1,13 @@
+.register-complaint {
+    padding: 64px 0;
+}
+
+.register-complaint-title {
+    font-weight: 700;
+    font-size: 42px;
+}
+
+.register-complaint-tagline {
+    font-weight: 300;
+    font-size: 18px;
+}

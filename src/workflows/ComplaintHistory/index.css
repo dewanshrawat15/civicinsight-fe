@@ -1,0 +1,22 @@
+.complaint-history {
+    padding: 64px 0;
+}
+
+.complaint-history-title {
+    font-weight: 700;
+    font-size: 42px;
+}
+
+.complaint-history-tagline {
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.complaint-view {
+    background-color: #f8f8f8;
+    margin-bottom: 8px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}

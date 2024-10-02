@@ -28,3 +28,19 @@ export interface RegisterUserResponseDTO {
     email: string,
     username: string
 }
+
+export interface ComplaintResponseDTO {
+    image: string;
+    text: string;
+    latitude: number;
+    longitude: number;
+}
+
+export interface ComplaintStatusDTO {
+    photo_url: string;
+    text: string;
+    latitude: number;
+    longitude: number;
+    created_at: string;
+    id: string;
+}
