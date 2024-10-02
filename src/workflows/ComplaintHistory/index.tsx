@@ -29,6 +29,7 @@ const ComplaintView = (props: ComplaintStatusDTO) => {
                     </center>
                 </div>
                 <div className="col-md-7">
+                    <p>{props.id}</p>
                     <p>{props.text}</p>
                     <p>{props.created_at}</p>
                 </div>

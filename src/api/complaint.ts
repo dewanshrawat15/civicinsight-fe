@@ -15,3 +15,13 @@ export const fetchHistory = async (): Promise<ComplaintStatusDTO[]> => {
     const response = await apiClient.get<ComplaintStatusDTO[]>("complaint/history/");
     return response.data;
 }
+
+
+export const fetchHistoryDetail = async (complaintId: string): Promise<ComplaintStatusDTO> => {
+    const response = await apiClient.get("complaint/detail/", {
+        params: {
+            complaintId: complaintId
+        }
+    });
+    return response.data;
+}

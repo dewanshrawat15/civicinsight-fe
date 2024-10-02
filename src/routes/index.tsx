@@ -6,6 +6,7 @@ import { RegisterPage } from "../workflows/RegisterPage";
 import { RegisterNewComplaint } from "../workflows/RegisterNewComplaint";
 import { ComplaintStatus } from "../workflows/ComplaintStatus";
 import { ComplaintHistory } from "../workflows/ComplaintHistory";
+import { ComplaintSearch } from "../workflows/ComplaintSearch";
 
 export const routes = createBrowserRouter([
     {
@@ -35,5 +36,9 @@ export const routes = createBrowserRouter([
     {
         path: "/complaint/history",
         element: <ComplaintHistory />,
+    },
+    {
+        path: "/complaint/search",
+        element: <ComplaintSearch />,
     },
 ]);

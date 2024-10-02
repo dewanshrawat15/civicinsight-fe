@@ -45,8 +45,8 @@ export const DashboardPage = () => {
             path: "/complaint/history",
         },
         {
-            name: "Check Complaint Status",
-            path: "/complaint/status",
+            name: "Search Complaint",
+            path: "/complaint/search",
         },
     ];
 
