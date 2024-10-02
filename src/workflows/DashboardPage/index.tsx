@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import "./index.css";
-import { getUserSession } from "../../api";
+import { getUserSession } from "../../api/auth";
 
 export const DashboardPage = () => {
     useEffect(() => {
