@@ -1,0 +1,24 @@
+#hero {
+    padding: 32px 0;
+}
+
+.hero-title {
+    font-weight: 700;
+    font-size: 54px;
+}
+
+.hero-tagline {
+    font-weight: 300;
+    font-size: 24px;
+}
+
+.hero-bttns {
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: 500;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #15171c;
+}
